@@ -58,6 +58,12 @@ const projectsDetails = [
         description: 'Developed an eCommerce website for sellers to showcase products, user authentication included.',
         link: 'https://tourmaline-bienenstitch-a6c177.netlify.app/'
     }
+    {
+        title: 'Internship Project',
+        duration: 'Feb 2024 - Mar 2024',
+        description: 'Developed a Blog website using HTML CSS JAVASCRIPT and PHP mySQL DATABASE.',
+        link: 'http://leadersboli.com/'
+    }
 ];
 
 const About = () => {
