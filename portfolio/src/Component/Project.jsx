@@ -1,24 +1,26 @@
 
 import React, { useState } from 'react';
 import '../Style/Project.css';
-import image from '../Images/port.avif';
-import img2 from '../Images/Screenshot 2024-07-13 155140.png';
+import image from '../Images/2.png';
+import img2 from '../Images/Untitled.png';
+
 
 const projects = [
   {
     img: image,
     name: 'E-commerce',
     description: 'This is a detailed description for E-commerce. It is designed to give a brief overview of the project, its features, and its goals.',
+    url: 'https://tourmaline-bienenstitch-a6c177.netlify.app/'
   },
   {
     img: img2,
-    name: 'E-commerce',
-    description: 'This is a detailed description for E-commerce. It is designed to give a brief overview of the project, its features, and its goals.',
+    name: 'Leadersboli.com',
+    description: 'A blog website where user can wath and read stories of founder ceo govt officials or  soldiers ',
   },
   {
     img: image,
-    name: 'E-commerce',
-    description: 'This is a detailed description for E-commerce. It is designed to give a brief overview of the project, its features, and its goals.',
+    name: 'Social Media app Twitter clone ',
+    description: 'Copy of tweeter clone.',
   },
 
 ];
@@ -56,17 +58,21 @@ const Project = () => {
             &#10094;
           </button>
           <div className="cards">
-            <a href="https://tourmaline-bienenstitch-a6c177.netlify.app/ " target='blank'>
+
+
+
             {projects.slice(currentIndex, currentIndex + 1).map((project, index) => (
               <div key={index} className={`card ${animationClass}`}>
-                <img src={project.img} alt={project.name} />
-                <div className="card-title">{project.name}</div>
-                <div className="card-content">
-                  <p>{project.description}</p>
-                </div>
+                <a href={project.url || '#'} target="_blank" rel="noopener noreferrer">
+                  <img src={project.img} alt={project.name} />
+                  <div className="card-title">{project.name}</div>
+                  <div className="card-content">
+                    <p>{project.description}</p>
+                  </div>
+                </a>
               </div>
             ))}
-            </a>
+
           </div>
           <button className="next" onClick={nextSlide}>
             &#10095;
